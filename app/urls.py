@@ -16,7 +16,9 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
+from task.views import TaskCreateListView
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('task/', TaskCreateListView.as_view(), name='task-create-list'),
 ]
